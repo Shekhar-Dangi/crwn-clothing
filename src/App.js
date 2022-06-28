@@ -9,20 +9,14 @@ import {
   useLocation,
   useNavigate,
 } from 'react-router-dom';
-
-const HatsPage = (props) => {
-  let location = useLocation();
-  console.log(location);
-  let navigate = useNavigate();
-  return <h1 onClick={() => navigate(-1)}>Hats Page!</h1>;
-};
+import ShopPage from './pages/shop/shop.component';
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/hats" element={<HatsPage />} />
+        <Route path="/shop" element={<ShopPage />} />
       </Routes>
     </>
   );
