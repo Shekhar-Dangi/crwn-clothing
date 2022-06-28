@@ -4,16 +4,14 @@ import Homepage from './pages/homepage/homepage.component';
 import {
   Routes,
   Route,
-  Link,
-  Outlet,
-  useLocation,
-  useNavigate,
 } from 'react-router-dom';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
 
 function App() {
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/shop" element={<ShopPage />} />
